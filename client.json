@@ -1,0 +1,14 @@
+{
+    "targetaddr": "127.0.0.1:3001",
+    "hubaddr": "192.168.1.145:10999",
+    "muxbuf": 16777216,
+    "streambuf": 1048576,
+    "streambuf-en": true,
+    "boosttimeout": 10000,
+    "pipebuf": 4096,
+    "rwbuf": 0,
+    "maxframe": 16384,
+    "key": "test123456",
+    "log":"",
+    "verb": 4
+}

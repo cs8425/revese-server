@@ -1,0 +1,49 @@
+test -v -coverprofile=coverage.txt -covermode=atomic -run TestHeadOfLineBlocking .
+=== RUN   TestHeadOfLineBlocking
+--- PASS: TestHeadOfLineBlocking (20.50s)
+	session_test.go:936: 9 stream start... 2017-10-01 18:48:46.190248945 +0800 CST m=+0.001909877
+	session_test.go:936: 1 stream start... 2017-10-01 18:48:46.190365754 +0800 CST m=+0.002026684
+	session_test.go:936: 2 stream start... 2017-10-01 18:48:46.190804692 +0800 CST m=+0.002465623
+	session_test.go:936: 3 stream start... 2017-10-01 18:48:46.19116757 +0800 CST m=+0.002828500
+	session_test.go:936: 4 stream start... 2017-10-01 18:48:46.191624871 +0800 CST m=+0.003285801
+	session_test.go:936: 5 stream start... 2017-10-01 18:48:46.19197005 +0800 CST m=+0.003630980
+	session_test.go:936: 6 stream start... 2017-10-01 18:48:46.19240146 +0800 CST m=+0.004062390
+	session_test.go:936: 8 stream start... 2017-10-01 18:48:46.192756306 +0800 CST m=+0.004417236
+	session_test.go:936: 0 stream start... 2017-10-01 18:48:46.193565075 +0800 CST m=+0.005226005
+	session_test.go:936: 7 stream start... 2017-10-01 18:48:46.193993244 +0800 CST m=+0.005654174
+	session_test.go:958: 1 3 1 stream end 158.224517ms 158.670491ms 127.005443ms 127.005502ms 204
+	session_test.go:939: 1 stream end... 2017-10-01 18:48:46.348638663 +0800 CST m=+0.160299593
+	session_test.go:958: 2 7 1 stream end 158.178709ms 159.052917ms 117.043723ms 117.043774ms 204
+	session_test.go:939: 2 stream end... 2017-10-01 18:48:46.349006396 +0800 CST m=+0.160667327
+	session_test.go:958: 3 9 1 stream end 158.181399ms 159.410377ms 106.939571ms 106.939641ms 204
+	session_test.go:939: 3 stream end... 2017-10-01 18:48:46.349362546 +0800 CST m=+0.161023476
+	session_test.go:958: 5 13 1 stream end 201.421259ms 203.451876ms 99.086221ms 99.086282ms 204
+	session_test.go:939: 5 stream end... 2017-10-01 18:48:46.393422476 +0800 CST m=+0.205083407
+	session_test.go:958: 6 15 1 stream end 201.329712ms 203.791492ms 89.151185ms 89.151238ms 204
+	session_test.go:939: 6 stream end... 2017-10-01 18:48:46.393744526 +0800 CST m=+0.205405456
+	session_test.go:958: 8 17 1 stream end 201.355045ms 204.171034ms 79.184339ms 79.18439ms 204
+	session_test.go:939: 8 stream end... 2017-10-01 18:48:46.394122742 +0800 CST m=+0.205783672
+	session_test.go:958: 0 21 1 stream end 200.908017ms 204.55ms 69.242009ms 69.242061ms 204
+	session_test.go:939: 0 stream end... 2017-10-01 18:48:46.394502226 +0800 CST m=+0.206163165
+	session_test.go:958: 7 19 1 stream end 200.908477ms 204.976511ms 59.276972ms 59.277025ms 204
+	session_test.go:939: 7 stream end... 2017-10-01 18:48:46.394927863 +0800 CST m=+0.206588794
+	session_test.go:958: 4 11 3 stream end 262.151046ms 263.846531ms 200.908332ms 200.90839ms 2048
+	session_test.go:939: 4 stream end... 2017-10-01 18:48:46.453816694 +0800 CST m=+0.265477624
+	session_test.go:958: 9 5 789 stream end 20.503652751s 20.504048582s 20.503571558s 20.503571617s 409600
+	session_test.go:939: 9 stream end... 2017-10-01 18:49:06.694029974 +0800 CST m=+20.505690905
+	session_test.go:977: [HoL test pktPerSec] 20
+	session_test.go:978: [HoL test Parallel] 10
+	session_test.go:979: [HoL test timeout] 50ms
+	session_test.go:992: 0 409600 2 3 1:131.665832ms	2:69.241943ms	
+	session_test.go:992: 1 204 1 3 2:127.004695ms	
+	session_test.go:992: 2 204 1 3 2:117.043667ms	
+	session_test.go:992: 3 204 2 3 1:51.241357ms	2:106.939669ms	
+	session_test.go:992: 4 2048 3 5 1:61.242153ms	2:96.880264ms	3:75.147994ms	
+	session_test.go:992: 5 204 2 3 1:102.334752ms	2:99.086008ms	
+	session_test.go:992: 6 204 2 3 1:112.178374ms	2:89.150866ms	
+	session_test.go:992: 7 204 2 3 1:141.631298ms	2:59.276784ms	
+	session_test.go:992: 8 204 2 3 1:122.170549ms	2:79.184248ms	
+	session_test.go:992: 9 204 6 791 2:155.533103ms	97:50.134507ms	557:50.28303ms	581:50.284533ms	615:50.460312ms	674:50.087871ms	
+PASS
+coverage: 51.3% of statements
+ok  	_/home/cs8425/code/revese-mux/lib/smux	20.508s
