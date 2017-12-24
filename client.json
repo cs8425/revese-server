@@ -1,6 +1,6 @@
 {
     "targetaddr": "127.0.0.1:8080",
-    "hubaddr": "192.168.1.145:10999",
+    "hubaddr": "hub.server.addr:10999",
     "muxbuf": 16777216,
     "streambuf": 1048576,
     "streambuf-en": true,

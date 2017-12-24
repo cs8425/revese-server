@@ -26,8 +26,8 @@ behind NAT, can connect to service which needs to expose.
   * run `hub -c hub.json`
 
 ````
-       port 80   |        |  port 10999  |          port 3001
+       port 80   |        |  port 10999  |          port 8080
 user  -------->  |  hub   |  <=========  |  client ----------->  services
-                 |  PC A  |              |  PC B
+                 |  PC B  |              |  PC A
 ````
 
