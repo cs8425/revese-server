@@ -1,6 +1,6 @@
 {
-    "localaddr": ":3001",
-    "adminaddr": ":10999",
+    "localaddr": ":80",
+    "upstreamaddr": ":10999",
     "muxbuf": 16777216,
     "streambuf": 1048576,
     "streambuf-en": true,

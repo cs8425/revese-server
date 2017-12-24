@@ -32,7 +32,7 @@ var copyBuf sync.Pool
 // Config for server
 type Config struct {
 	LocalAddr    string `json:"localaddr"`
-	AdminAddr    string `json:"adminaddr"`
+	UpStreamAddr string `json:"upstreamaddr"`
 
 	MuxBuf       int    `json:"muxbuf"`
 	MuxStreamBuf int    `json:"streambuf"`
@@ -159,7 +159,7 @@ func main() {
 
 
 	Vln(2, "listening on:", config.LocalAddr)
-	Vln(2, "Admin address:", config.AdminAddr)
+	Vln(2, "upstream address:", config.UpStreamAddr)
 	Vln(2, "muxbuf:", config.MuxBuf)
 	Vln(2, "muxstreambuf:", config.MuxStreamBuf)
 	Vln(2, "muxstreambuf-en:", config.StreamBufEn)
@@ -200,7 +200,7 @@ func main() {
 				continue
 			}
 
-			Vln(4, "admin init start:", conn.RemoteAddr())
+			Vln(4, "upstream init start:", conn.RemoteAddr())
 
 			// stream multiplex
 			var session *smux.Session
@@ -237,11 +237,11 @@ func main() {
 				continue
 			}
 
-			Vln(2, "admin connect in:", conn.RemoteAddr())
+			Vln(2, "upstream connect in:", conn.RemoteAddr())
 
 			chAdmin <- session
 		}
-	}(config.AdminAddr)
+	}(config.UpStreamAddr)
 
 	sess := <-chAdmin
 	for {
